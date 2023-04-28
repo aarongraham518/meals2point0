@@ -9,12 +9,22 @@ const RestaurantCard = styled(Card)`
 
 const RestaurantCardCover = styled(Card.Cover)`
   padding: ${(props) => props.theme.space[3]};
-  background-color: "white";
+  background-color: ${(props) => props.theme.colors.bg.primary};
+`;
+const Address = styled.Text`
+  font-family: ${(props) => props.theme.fonts.body};
+  font-size: ${(props) => props.theme.fonts.caption};
 `;
 
+
 const Title = styled.Text`
-  padding: ${(props) => props.theme.space[3]};
+  font-family: ${(props) => props.theme.fonts.heading};
+  font-size: ${(props) => props.theme.fontSizes.body};
   color: ${(props) => props.theme.colors.ui.primary};
+`;
+
+const Info = styled.View`
+  padding: ${(props) => props.theme.space[3]};
 `;
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
@@ -36,7 +46,10 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
         style={styles.cover}
         source={{ uri: photos[0] }}
       />
-      <Title style={styles.title}>{name}</Title>
+      <Info>
+        <Title style={styles.title}>{name}</Title>
+        <Address style={styles.title}>{address}</Address>
+      </Info>
     </RestaurantCard>
   );
 };
