@@ -29,8 +29,8 @@ const LoadingContainer = styled.View`
 
 export const RestaurantsScreen = () => {
   const { isLoading, error, restaurants } = useContext(RestaurantsContext);
-  console.log(error, 'is the error');
-  console.log(restaurants, '!!!!!!!!!!!!!')
+  // console.log(error, 'is the error');
+  // console.log(restaurants, '!!!!!!!!!!!!!')
   return (
     <SafeArea>
       {isLoading && (
@@ -44,7 +44,7 @@ export const RestaurantsScreen = () => {
       <RestaurantList
         data={restaurants}
         renderItem={({ item }) => {
-          console.log(item, 'IS THE ITEM1!!!!!!!!!');
+          // console.log(item, 'IS THE ITEM1!!!!!!!!!');
           return (
             <Spacer position="bottom" size="large">
               <RestaurantInfoCard restaurant={item} />

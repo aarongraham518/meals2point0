@@ -34,7 +34,7 @@ export const RestaurantsContextProvider = ({ children }) => {
     retrieveRestaurants();
   }, []);
 
-  console.log(restaurants, 'ARE THE RESTAURANT!!!!!');
+  // console.log(restaurants, 'ARE THE RESTAURANT!!!!!');
   return (
     <RestaurantsContext.Provider
       value={{
