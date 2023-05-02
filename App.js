@@ -7,7 +7,7 @@ import { SafeArea } from "./src/components/utility/safe-area-component";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import {Ionicons} from "@expo/vector-icons";
-
+import { RestaurantsContextProvider } from "./src/services/restaurants/restaurants-context";
 
 const Tab = createBottomTabNavigator();
 // const isAndroid = Platform.OS === 'android';/
@@ -67,6 +67,7 @@ export default function App() {
       {/* not context api, but styled-componenent */}
       <ThemeProvider theme={theme}>
         {/* <RestaurantsScreen/> */}
+        <RestaurantsContextProvider>        
         <NavigationContainer>
           <Tab.Navigator
           screenOptions={createScreenOptions}
@@ -80,6 +81,7 @@ export default function App() {
             <Tab.Screen name="Settings" component={SettingsScreen} />
           </Tab.Navigator>
         </NavigationContainer>
+        </RestaurantsContextProvider>
       </ThemeProvider>
 
       <ExpoStatusBar style="auto" />
