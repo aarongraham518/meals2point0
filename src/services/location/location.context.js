@@ -22,7 +22,7 @@ export const LocationContextProvider = ({ children }) => {
       .then((result) => {
         setIsLoading(false);
         setLocation(result);
-        console.log(result);
+        console.log(result, '!!!!!!! INside out context');
       })
       .catch((err) => {
         setIsLoading(false);
