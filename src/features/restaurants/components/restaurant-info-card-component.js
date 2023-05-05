@@ -15,6 +15,7 @@ import {
   Icon,
   Address,
 } from "./restaurant-info-card-styles";
+import { Favourite } from "../../../components/favourites/favourites.component";
 
 const Open = styled(SvgXml)`
   flex-direction: row;
@@ -38,6 +39,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
 
   return (
     <RestaurantCard elevation={5}>
+      <Favourite />
       <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
       <Info>
         <Text variant="label">{name}</Text>
