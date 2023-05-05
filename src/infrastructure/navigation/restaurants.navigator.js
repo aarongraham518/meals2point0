@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import {
   createStackNavigator,
   TransitionPresets,
@@ -14,9 +13,10 @@ const RestaurantStack = createStackNavigator();
 export const RestaurantsNavigator = () => {
   return (
     <RestaurantStack.Navigator 
-        headerMode="none" 
+        headerMode="none"         
         screenOptions={{
             ...TransitionPresets.ModalPresentationIOS,
+            // headerShown: 'false'
         }}
     >
       <RestaurantStack.Screen
