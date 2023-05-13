@@ -22,7 +22,6 @@ const Settings = () => (
   </SafeArea>
 );
 
-
 const createScreenOptions = ({ route }) => {
   const iconName = TAB_ICON[route.name];
   return {

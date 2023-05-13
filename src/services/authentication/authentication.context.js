@@ -27,9 +27,12 @@ export const AuthenticationContextProvider = ({ children }) => {
 
   const onLogin = (email, password) => {
     setIsLoading(true);
+    // console.log(auth, 'CHECKING THE VALUE OF AUTH!!!!');
     loginRequest(auth, email, password)
       .then((u) => {
+        // console.log(u, 'ARE THE RESULTS OF U')
         setUser(u);
+        // console.log(u, 'checking the value of u !!!!');
         setIsLoading(false);
       })
       .catch((e) => {

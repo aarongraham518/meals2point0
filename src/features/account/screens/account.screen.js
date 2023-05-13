@@ -1,4 +1,5 @@
 import React from "react";
+import { Text } from "react-native";
 import { Spacer } from "../../../components/spacer/spacer-component";
 
 import {
@@ -13,14 +14,14 @@ export const AccountScreen = ({navigation}) => {
   return (
     <AccountBackground>
       <AccountCover />
-      <Title>Meals To Go</Title>
+      <Title>Where's the Truck</Title>
       <AccountContainer>
         <AuthButton
           icon="lock-open-outline"
           mode="contained"
           onPress={() => navigation.navigate('Login')}
         >
-          Login
+         Login
         </AuthButton>
         <Spacer size="large">
         <AuthButton
